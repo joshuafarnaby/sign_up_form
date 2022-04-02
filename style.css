@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+:root {
+  --sky-blue: #00a2ec;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #fefefe;
@@ -14,6 +18,8 @@ body {
   display: flex;
   height: 100vh;
 }
+
+/* image and page header style */
 
 .image-container {
   position: relative;
@@ -53,7 +59,90 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ensure default styling is consistent across browsers */
+/* form section style */
+
+.form-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* padding: 5px; */
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  position: absolute;
+  top: 100px;
+  padding: 10px;
+  /* margin-top: 100px; */
+}
+
+.form-header p {
+  font-size: 2rem;
+  /* padding: 15px 30px; */
+}
+
+.sign-up-form {
+  /* background-color: #eee; */
+  width: 100%;
+}
+
+.form-controls {
+  background-color: #eee;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.form-controls p {
+  /* width: 100px; */
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 50%;
+  padding: 15px 10px;
+  position: relative;
+}
+
+.form-controls span {
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  font-size: 12px;
+}
+
+.form-btns {
+  margin: 20px;
+}
+
+.form-btns > button {
+  width: 150px;
+  border: 1px solid var(--sky-blue);
+  color: var(--sky-blue);
+  background-color: inherit;
+  border-radius: 8px;
+  font-size: 1.5rem;
+}
+
+.form-btns > button:hover {
+  color: #fefefe;
+  background-color: var(--sky-blue);
+  cursor: pointer;
+}
+
+.login-link {
+  position: absolute;
+  bottom: 5px;
+}
+
+.login-link a {
+  color: var(--sky-blue);
+}
+
+/* ensure form default styling is consistent across browsers */
 
 input {
   -webkit-appearance: none;
@@ -69,22 +158,12 @@ textarea {
   font-size: 100%;
 }
 
-form {
-  margin: 50px;
-}
-
-form p {
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-}
-
-input[type='text'] {
+input {
   border: 1px solid #666;
   border-radius: 4px;
 }
 
-input[type='text']:focus {
+input:focus {
   outline: none;
   box-shadow: 2px 2px 4px #aaa;
   border-color: #333;

@@ -83,7 +83,8 @@ a:hover {
 
 .form-header p {
   font-size: 2rem;
-  /* padding: 15px 30px; */
+  color: var(--sky-blue);
+  padding: 0 10px;
 }
 
 .sign-up-form {
@@ -92,7 +93,7 @@ a:hover {
 }
 
 .form-controls {
-  background-color: #eee;
+  /* background-color: #eee; */
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
@@ -105,6 +106,10 @@ a:hover {
   flex: 0 0 50%;
   padding: 15px 10px;
   position: relative;
+}
+
+.form-controls label {
+  color: var(--sky-blue);
 }
 
 .form-controls span {
@@ -159,12 +164,12 @@ textarea {
 }
 
 input {
-  border: 1px solid #666;
+  border: 1px solid var(--sky-blue);
   border-radius: 4px;
 }
 
 input:focus {
   outline: none;
-  box-shadow: 2px 2px 4px #aaa;
-  border-color: #333;
+  box-shadow: 2px 2px 4px var(--sky-blue);
+  border-color: var(--sky-blue);
 }

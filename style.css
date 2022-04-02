@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fefefe;
+  color: #333;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+}
+
+.image-container h1,
+.image-container p {
+  position: absolute;
+}
+
+img {
+  height: inherit;
+}
+
+.image-container h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  color: #eee;
+  top: 150px;
+}
+
+.image-container p {
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ensure default styling is consistent across browsers */
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button,
+input,
+select,
+textarea {
+  padding: 5px;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+form {
+  margin: 50px;
+}
+
+form p {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type='text'] {
+  border: 1px solid #666;
+  border-radius: 4px;
+}
+
+input[type='text']:focus {
+  outline: none;
+  box-shadow: 2px 2px 4px #aaa;
+  border-color: #333;
+}

@@ -3,6 +3,7 @@ const APP = (() => {
 
   const firstNameControl = document.getElementById('first-name');
   const lastNameControl = document.getElementById('last-name');
+  const emailControl = document.getElementById('email');
 
   const validateName = function () {
     let formControl = this;
@@ -12,7 +13,17 @@ const APP = (() => {
     if (formControl.validity.valid) {
       removeError(errorContainer);
     } else if (formControl.validity.valueMissing) {
-      showError(errorContainer, `A ${nameType} name is required`);
+      showError(errorContainer, `Please enter a ${nameType} name`);
+    }
+  }
+
+  const validateEmail = function () {
+    const errorContainer = emailControl.parentElement.querySelector('span.error-msg');
+
+    if (emailControl.validity.valid) {
+      removeError(errorContainer)
+    } else if (emailControl.validity.typeMismatch || emailControl.validity.valueMissing) {
+      showError(errorContainer, 'Please enter an email address in format a@b')
     }
   }
 
@@ -21,4 +32,5 @@ const APP = (() => {
 
   firstNameControl.addEventListener('input', validateName.bind(firstNameControl));
   lastNameControl.addEventListener('input', validateName.bind(lastNameControl));
+  emailControl.addEventListener('change', validateEmail);
 })();

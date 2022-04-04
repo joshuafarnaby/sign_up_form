@@ -145,7 +145,7 @@ input::placeholder {
 
 .form-controls span {
   position: absolute;
-  bottom: 0;
+  bottom: -4px;
   left: 12px;
   font-size: 12px;
 }

@@ -6,6 +6,7 @@
 
 :root {
   --sky-blue: #00a2ec;
+  --sky-blue-faded: #00a1ec88;
   --success: #03e762;
 }
 
@@ -18,6 +19,7 @@ body {
 .main-container {
   display: flex;
   height: 100vh;
+  position: relative;
 }
 
 /* image and page header style */
@@ -79,12 +81,18 @@ textarea {
 input {
   border: 1px solid var(--sky-blue);
   border-radius: 4px;
+  color: var(--sky-blue);
 }
 
 input:focus {
   outline: none;
   box-shadow: 2px 2px 4px var(--sky-blue);
   border-color: var(--sky-blue);
+}
+
+input::placeholder {
+  color: var(--sky-blue-faded);
+  font-style: italic;
 }
 
 /* form section style */
@@ -167,4 +175,52 @@ input:focus {
 
 .login-link a {
   color: var(--sky-blue);
+}
+
+.error-msg {
+  color: var(--sky-blue);
+}
+
+@media (max-width: 1300px) {
+  .form-header {
+    margin-top: 0px;
+  }
+
+  .form-header p {
+    padding: 0;
+    font-size: 1.75rem;
+  }
+
+  .sign-up-form {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .form-controls p {
+    flex: 1 0 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  html {
+    font-size: 13px;
+  }
+
+  img,
+  .image-container {
+    width: 100%;
+  }
+
+  .image-container h1 {
+    top: 40px;
+  }
+
+  .form-container {
+    position: absolute;
+    background-color: #fefefe;
+    border-radius: 10px;
+    width: 75%;
+    top: 150px;
+    left: 12.5%;
+  }
 }
